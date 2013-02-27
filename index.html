@@ -12,7 +12,7 @@
 
 <div id='map'></div>
 <script>
-mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.Redo', 'washadvocates.Pivot_Table'], function(data) {
+mapbox.auto ('map', 'washadvocates.map-bbfizh0g');
   var map = mapbox.map('map');
   var layers = document.getElementById('map-ui');
   
