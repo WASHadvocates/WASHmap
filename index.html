@@ -18,19 +18,27 @@
 
         map.ui.zoomer.add();
         
-
-        // Create a marker using the simplestyle factory
-        var elem = mapbox.markers.simplestyle_factory(m);
-
-        // Add function that centers marker on click
-        MM.addEvent(elem, 'click', function(e) {
-           var px = MM.getMousePoint(e, map);
-           var point = map.pointLocation(px).toString();
-          map.centerzoom({point}, 6);
-          map.refresh()
+                MM.addEvent(elem, 'click', function(e) {
+            map.ease.location({
+              lat: m.geometry.coordinates[1],
+              lon: m.geometry.coordinates[0]
+            }).zoom(map.zoom()).optimal();
         });
 
         return elem;
+
+        // Create a marker using the simplestyle factory
+      //  var elem = mapbox.markers.simplestyle_factory(m);
+
+        // Add function that centers marker on click
+      //  MM.addEvent(elem, 'click', function(e) {
+        //   var px = MM.getMousePoint(e, map);
+        //   var point = map.pointLocation(px).toString();
+        //  map.centerzoom({point}, 6);
+        //  map.refresh()
+        //});
+
+      //  return elem;
     
    // MM.addEvent(map.parent, 'click', function(e) {
      //   var px = MM.getMousePoint(e, map);
