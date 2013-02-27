@@ -20,9 +20,9 @@
 
         // After specifying multiple ids to mapbox.load, you'll get an array
         // of data objects back, with pre-initialized layer and markers members
-        map.addLayer(data[2]);
-        map.addLayer(data[1]);
-        map.addLayer(data[0]);
+        map.addLayer(data[2].markers);
+        map.addLayer(data[1].markers);
+        map.addLayer(data[0].layer);
 
         // Zoom and center the map
         map.zoom(11).center(data[0].center);
