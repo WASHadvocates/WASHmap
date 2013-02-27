@@ -17,10 +17,23 @@
         map.interaction.auto();
 
         map.ui.zoomer.add();
+        
+        tiledata.markers.factory(function(m) {
+
+        // Create a marker using the simplestyle factory
+        var elem = mapbox.markers.simplestyle_factory(m);
+
+        // Add function that centers marker on click
+        MM.addEvent(elem, 'click', function(e) {
+           var px = MM.getMousePoint(e, map);
+          map.centerzoom('map.pointLocation(px).toString();', 6).zoom(map.zoom()).optimal();
+        });
+
+        return elem;
     
     MM.addEvent(map.parent, 'click', function(e) {
         var px = MM.getMousePoint(e, map);
-        map.centerzoom('map.pointLocation(px).toString();', 6)
+        map.centerzoom({map.pointLocation(px).toString();}, 6)
     });
 
 
@@ -28,6 +41,7 @@
         //map.zoom(11).center(data[0].center);
 
 
+    });
     });
 </script>
 
