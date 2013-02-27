@@ -18,13 +18,11 @@
 
         map.ui.zoomer.add();
     
-    var elem = 
     MM.addEvent(map.parent, 'click', function(e) {
         var px = MM.getMousePoint(e, map);
-        map.centerzoom(map.pointLocation(px).toString();)
+        map.centerzoom(map.pointLocation(px).toString();, 6)
     });
 
-        return elem;
 
         // Zoom and center the map
         //map.zoom(11).center(data[0].center);
