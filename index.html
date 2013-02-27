@@ -18,11 +18,13 @@
 
         map.ui.zoomer.add();
 
-        // After specifying multiple ids to mapbox.load, you'll get an array
-        // of data objects back, with pre-initialized layer and markers members
-        map.addLayer(data[0].markers);
-        map.addLayer(data[1].markers);
-        map.addLayer(data[2].layer);
+ 
+  map.addLayer(mapbox.layer().id('washadvocates.Redo', function() {
+    map.interaction.auto();
+    }));
+  map.addLayer(mapbox.layer().id('washadvocates.Pivot_Table', function() {
+    map.interaction.auto();
+    }));
 
         // Zoom and center the map
         map.zoom(11).center(data[0].center);
