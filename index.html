@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,15 +26,6 @@
 
         // Zoom and center the map
         map.zoom(11).center(data[0].center);
-
-  var zoomlevel = map.zoom();
-  
-  map.disablelayerAt(1);
-  
-  if zoomlevel > 5 {
-    map.EnableLaterAt(1);
-    map.DisableLayerAt(2);
-  }
 
 
     });
