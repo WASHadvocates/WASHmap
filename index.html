@@ -17,13 +17,12 @@
         map.interaction.auto();
 
         map.ui.zoomer.add();
-        
-        MM.addEvent(elem, 'click', function(e) {
-            map.ease.location({
-              lat: m.geometry.coordinates[1],
-              lon: m.geometry.coordinates[0]
-            }).zoom(map.zoom()).optimal();
-        });
+    
+    var elem = 
+    MM.addEvent(map.parent, 'click', function(e) {
+        var px = MM.getMousePoint(e, map);
+        map.centerzoom(map.pointLocation(px).toString();)
+    });
 
         return elem;
 
