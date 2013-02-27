@@ -18,7 +18,14 @@
 
         map.ui.zoomer.add();
         
-        
+        MM.addEvent(elem, 'click', function(e) {
+            map.ease.location({
+              lat: m.geometry.coordinates[1],
+              lon: m.geometry.coordinates[0]
+            }).zoom(map.zoom()).optimal();
+        });
+
+        return elem;
 
         // Zoom and center the map
         //map.zoom(11).center(data[0].center);
