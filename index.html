@@ -12,25 +12,13 @@
 
 <div id='map'></div>
 <script>
-mapbox.auto ('map');
-  var map = mapbox.map('map');
+mapbox.auto ('map', 'washadvocates.map-bbfizh0g');
 
-  map.addLayer(mapbox.layer().id('washadvocates.map-bbfizh0g'));
   map.addLayer(mapbox.layer().id('washadvocates.Redo', function() {
     map.interaction.auto();
     }));
-  map.addLayer(mapbox.layer().id('washadvocates.Pivot_Table', function() {
-    map.interaction.auto();
-    }));
-    
-  var zoomlevel = map.zoom();
-  
-  map.disablelayerAt(1);
-  
-  if zoomlevel > 5 {
-    map.EnableLaterAt(1);
-    map.DisableLayerAt(2);
-  }
+
+
 </script>
 
 </body>
