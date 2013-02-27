@@ -18,7 +18,7 @@
 
         map.ui.zoomer.add();
         
-        MM.addEvent(map.parent, 'click', function(e) {
+        MM.addEvent(map, 'click', function(e) {
         var px = MM.getMousePoint(e, map);
         click.innerHTML = map.pointLocation(px).toString();
         map.centerzoom(map.pointLocation(px).toString(), 6;);
