@@ -13,9 +13,22 @@
 <script>
   mapbox.auto('map', 'washadvocates.map-bbfizh0g');
   
-  map.addLayer(mapbox.layer().named(points).id('washadvocates.Redo'));
-  map.addLayer(mapbox.layer().named(statepoints).id('washadvocates.Pivot_Table'));
-  var
+  map.addLayer(mapbox.layer().id('washadvocates.Redo', function() {
+    map.interaction.auto();
+    }));
+  map.addLayer(mapbox.layer().id('washadvocates.Pivot_Table', function() {
+    map.interaction.auto();
+    }));
+    
+  var zoomlevel = map.zoom();
+  
+  map.disablelayerAt(0);
+  
+  if zoomlevel > 5 {
+    map.EnableLaterAt(0);
+    map.DisableLayerAt(1);
+  }
+  
 </script>
 
 </body>
