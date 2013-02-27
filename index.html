@@ -26,15 +26,17 @@
         // Add function that centers marker on click
         MM.addEvent(elem, 'click', function(e) {
            var px = MM.getMousePoint(e, map);
-          map.centerzoom('map.pointLocation(px).toString();', 6).zoom(map.zoom()).optimal();
+           var point = map.pointLocation(px).toString();
+          map.centerzoom({point}, 6);
+          map.refresh()
         });
 
         return elem;
     
-    MM.addEvent(map.parent, 'click', function(e) {
-        var px = MM.getMousePoint(e, map);
-        click.innerHTML = map.pointLocation(px).toString();
-        map.centerzoom({click.innerhtml, 6)
+   // MM.addEvent(map.parent, 'click', function(e) {
+     //   var px = MM.getMousePoint(e, map);
+       // click.innerHTML = map.pointLocation(px).toString();
+      //  map.centerzoom({click.innerhtml, 6)
     });
 
 
@@ -42,7 +44,6 @@
         //map.zoom(11).center(data[0].center);
 
 
-    });
     });
 </script>
 
