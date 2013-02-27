@@ -18,6 +18,12 @@
 
         map.ui.zoomer.add();
         
+        tiledata.markers.factory(function(m) {
+
+        // Create a marker using the simplestyle factory
+        var elem = mapbox.markers.simplestyle_factory(m);
+
+        // Add function that centers marker on click
         MM.addEvent(elem, 'click', function(e) {
             map.ease.location({
               lat: m.geometry.coordinates[1],
@@ -26,6 +32,7 @@
         });
 
         return elem;
+    });
 
         // Zoom and center the map
         //map.zoom(11).center(data[0].center);
