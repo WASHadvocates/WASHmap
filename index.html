@@ -13,8 +13,10 @@
 <div id='map'></div>
 <script>
     mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table', 'washadvocates.Redo'], function(map, tiledata) {
-        var map = mapbox.auto('map', ['washadvocates.map-bbfizh0g', 'washadvocates.Redo', 'washadvocates.Pivot_Table']);
-        map.interaction.auto();
+        var map = mapbox.auto('map', 'washadvocates.map-bbfizh0g');
+        map.addlayer(mapbox.layer().id(['washadvocates.Pivot_Table', 'washadvocates.Redo'], function(){
+          
+        }))
 
         map.ui.zoomer.add();
         
