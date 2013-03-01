@@ -13,8 +13,13 @@
 <div id='map'></div>
 <script>
     mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table', 'washadvocates.Redo'], function(map, tiledata) {
-        var map = mapbox.auto('map', 'washadvocates.map-bbfizh0g');
-        var markers = mapbox.auto('map', ['washadvocates.Pivot_Table','washadvocates.Redo'])
+        //var map = mapbox.auto('map', ['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table','washadvocates.Redo']);
+        var map = mapbox.map('map');
+        map.addLayer(mapbox.layer().id(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table','washadvocates.Redo'], function() {
+    // this function runs after the layer examples.map-8ced9urs is loaded
+    // from MapBox and we know what interactive features are supported.
+    map.interaction.auto();
+}));
 
         map.ui.zoomer.add();
         
