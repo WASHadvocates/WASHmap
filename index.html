@@ -14,9 +14,7 @@
 <script>
     mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table', 'washadvocates.Redo'], function(map, tiledata) {
         var map = mapbox.auto('map', 'washadvocates.map-bbfizh0g');
-        var markers = map.addlayer(mapbox.layer().id(['washadvocates.Pivot_Table', 'washadvocates.Redo'], function(){
-          
-        }))
+        var markers = mapbox.auto('map', ['washadvocates.Pivot_Table','washadvocates.Redo'])
 
         map.ui.zoomer.add();
         
