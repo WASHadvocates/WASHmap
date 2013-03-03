@@ -18,12 +18,21 @@ mapbox.converters.googledocs = function(spreadsheet, sheet, callback) {
             StateLonfield = '';
             Organizationfield = '';
             Projectfield = '';
+            Targetfield = '';
+            Descriptionfield = '';
+            Cityfield = '';
+            Statefield = '';
         if (!x || !x.feed) return features;
 
         for (var f in x.feed.entry[0]) {
-            if (f.match(/\$Lat/i)) latfield = f;
-            if (f.match(/\$Lon/i)) lonfield = f;
-            if (f.match(/\$StateLat/i))
+            if (f.match(/\$Latitude/i)) latfield = f;
+            if (f.match(/\$Longitude/i)) lonfield = f;
+            if (f.match(/\$StateLat/i)) StateLatfield = f;
+            if (f.match(/\$StateLon/i)) StateLonfield = f;
+            if (f.match(/\$Organization_Name/i)) Organizationfield = f;
+            if (f.match(/\$Project_Name/i)) Projectfield = f;
+            if (f.match(/\$Target_Countries/i)) Targetfield = f;
+            if (f.match(/\$Description/i)) Descriptionfield = f;
         }
 
         for (var i = 0; i < x.feed.entry.length; i++) {
