@@ -33,6 +33,8 @@ mapbox.converters.googledocs = function(spreadsheet, sheet, callback) {
             if (f.match(/\$Project_Name/i)) Projectfield = f;
             if (f.match(/\$Target_Countries/i)) Targetfield = f;
             if (f.match(/\$Description/i)) Descriptionfield = f;
+            if (f.match(/\$City/i)) Cityfield = f;
+            if (f.match(/\$State/i)) Statefield = f;
         }
 
         for (var i = 0; i < x.feed.entry.length; i++) {
@@ -40,7 +42,7 @@ mapbox.converters.googledocs = function(spreadsheet, sheet, callback) {
             var feature = {
                 geometry: {
                     type: 'Point',
-                    coordinates: []
+                    coordinates: [latfield, lonfield]
                 },
                 properties: {}
             };
