@@ -20,6 +20,7 @@ code { font:normal 12px/20px monospace; }
 h1,h2,h3,h4,h5,h6 {
   font-weight:700;
   margin: 1em 0;
+  color: white;
   }
 h1 a,
 h2 a,
@@ -27,7 +28,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-   color:#fff;
+   color: blue;
 }
 h1 a:hover,
 h2 a:hover,
@@ -248,8 +249,8 @@ max-width:185px;
   z-index: 10000;
   left: 470px;
   bottom: 15px;
-  background: #f2f2f2;
-  background: rgba(255,255,255,.9);
+  background: #c45b4b;
+  background: rgba(196,91,75,.9);
   max-width: 280px;
   -moz-border-radius: 2px;
   border-radius: 2px;
