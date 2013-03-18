@@ -12,7 +12,7 @@ body.
 body,
 textarea,
 input {
-  font: 14px/21px 'Open Sans',Helvetica,freesans,clean,sans-serif;
+  font: 14px/21px arial,freesans,clean,sans-serif;
   }
 pre,
 code { font:normal 12px/20px monospace; }
@@ -325,7 +325,7 @@ max-width:185px;
 .wax-tooltip h4,
 .wax-tooltip h5,
 .wax-tooltip h6 {
-  font: 13px/20px 'Open Sans',Helvetica,arial,freesans,clean,sans-serif;
+  font: 13px/20px arial,freesans,clean,sans-serif;
   margin: 0;
   padding: 0;
   }
