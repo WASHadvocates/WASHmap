@@ -13,17 +13,23 @@
 
 <div id='map'></div>
 <script>
-    mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table', 'washadvocates.Redo'], function(map, tiledata) {
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://mapbox-js.s3.amazonaws.com/mapbox.js/v0.6.6/mapbox.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/script.js"></script>
+  
+    //mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table', 'washadvocates.Redo'], function(map, tiledata) {
         //var map = mapbox.auto('map', ['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table','washadvocates.Redo']);
-        var map = mapbox.map('map');
-        map.zoom(4).center({ lat: 39, lon: -98 });
-        map.addLayer(mapbox.layer().id(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table','washadvocates.Redo'], function() {
+       // var map = mapbox.map('map');
+        //map.zoom(4).center({ lat: 39, lon: -98 });
+        //map.addLayer(mapbox.layer().id(['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table','washadvocates.Redo'], function() {
     // this function runs after the layer examples.map-8ced9urs is loaded
     // from MapBox and we know what interactive features are supported.
-    map.interaction.auto();
-}));
+   // map.interaction.auto();
+//}));
 
-              map.ui.zoomer.add();
+           //   map.ui.zoomer.add();
 
         // Create a marker using the simplestyle factory
       //  var elem = mapbox.markers.simplestyle_factory(m);
@@ -42,7 +48,7 @@
      //   var px = MM.getMousePoint(e, map);
        // click.innerHTML = map.pointLocation(px).toString();
       //  map.centerzoom({click.innerhtml, 6)
-    });
+  //  });
 
 
         // Zoom and center the map
