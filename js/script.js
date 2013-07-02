@@ -63,8 +63,8 @@
 		                },
 		                properties: {
 							'marker-color':'#F33',
-							'title': 'Last update: ' + entry['gsx$timenow'].$t,
-							'description': entry['gsx$tweet'].$t
+							'title': 'Organization: ' + entry['gsx$Organization'].$t,
+							'description': entry['gsx$Project'].$t
 						}
 		            };
 		            for (var y in entry) {
