@@ -12,12 +12,44 @@
 <body>
 
 <div id='map'></div>
+<script>
+    mapbox.load(['washadvocates.map-bbfizh0g', 'washadvocates.PivotTable', 'washadvocates.Individuals'], function(map, tiledata) {
+        //var map = mapbox.auto('map', ['washadvocates.map-bbfizh0g', 'washadvocates.Pivot_Table','washadvocates.Redo']);
+        var map = mapbox.map('map');
+        map.zoom(4).center({ lat: 39, lon: -98 });
+        map.addLayer(mapbox.layer().id(['washadvocates.map-bbfizh0g', 'washadvocates.PivotTable','washadvocates.Individuals'], function() {
+    // this function runs after the layer examples.map-8ced9urs is loaded
+    // from MapBox and we know what interactive features are supported.
+    map.interaction.auto();
+}));
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="http://mapbox-js.s3.amazonaws.com/mapbox.js/v0.6.6/mapbox.js"></script>
-  <script src="js/underscore-min.js"></script>
-  <script src="js/script.js"></script>
-  
+              map.ui.zoomer.add();
+
+        // Create a marker using the simplestyle factory
+      //  var elem = mapbox.markers.simplestyle_factory(m);
+
+        // Add function that centers marker on click
+      //  MM.addEvent(elem, 'click', function(e) {
+        //   var px = MM.getMousePoint(e, map);
+        //   var point = map.pointLocation(px).toString();
+        //  map.centerzoom({point}, 6);
+        //  map.refresh()
+        //});
+
+      //  return elem;
+    
+   // MM.addEvent(map.parent, 'click', function(e) {
+     //   var px = MM.getMousePoint(e, map);
+       // click.innerHTML = map.pointLocation(px).toString();
+      //  map.centerzoom({click.innerhtml, 6)
+    });
+
+
+        // Zoom and center the map
+        //map.zoom(11).center(data[0].center);
+
+
+</script>
 
 </body>
 </html>
